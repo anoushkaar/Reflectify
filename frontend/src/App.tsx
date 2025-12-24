@@ -25,11 +25,11 @@ function App() {
       <Routes>
         <Route
           path="/login"
-          element={isAuthenticated ? <Home /> : <SignIn />}
+          element={isAuthenticated ? <Navigate to="/" /> : <SignIn />}
         />
         <Route
           path="/register"
-          element={isAuthenticated ? <Home /> : <SignUp />}
+          element={isAuthenticated ? <Navigate to="/" /> : <SignUp />}
         />
         <Route path="/forgot-password" element={<Forgot />} />
         <Route path="/reset-password/:token" element={<ResetPassword />} />
